@@ -2,11 +2,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { User } from '../../domain/User';
 
-const API_BASE_URL = 'https://65f9f44a3909a9a65b19b422.mockapi.io/users/';
 
 export const userApi = createApi({
   reducerPath: 'userApi',
-  baseQuery: fetchBaseQuery({ baseUrl: API_BASE_URL }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_BASE_URL }),
   tagTypes:['Users'],
   endpoints: (builder) => ({
     getAllUsers: builder.query<User[], void>({
