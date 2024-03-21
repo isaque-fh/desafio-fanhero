@@ -3,7 +3,8 @@ import {  Drawer, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuer
 import { Box } from '@mui/system';
 import PersonIcon from '@mui/icons-material/Person';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
-import { useStyles } from './menuLateralStyle'
+import { useStyles } from './MenuLateralStyle'
+import { Link } from 'react-router-dom';
 
 export const MenuLateral = ({ children }: {children: React.ReactNode}) => {
   const theme = useTheme();
@@ -21,12 +22,15 @@ export const MenuLateral = ({ children }: {children: React.ReactNode}) => {
 
           <Box>
             <List component="nav">
+              <Link to="/users">
               <ListItemButton className={classes.btn}>
                 <ListItemIcon>
                   <PersonIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Users" />
               </ListItemButton>
+              </Link>
+              
             </List>
             <List component="nav">
               <ListItemButton  className={classes.btn}>

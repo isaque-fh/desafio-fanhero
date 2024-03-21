@@ -1,6 +1,6 @@
 
 import { Box, Typography } from '@mui/material'
-import UserTable from '../../../shared/components/user-list/userTable'
+import UserTable from './components/user-list/UserTable'
 import { useStyles } from './UsersStyle'
 export default function User() {
   const classes = useStyles()

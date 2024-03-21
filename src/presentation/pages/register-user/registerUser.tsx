@@ -1,5 +1,9 @@
+import { TextField } from "@mui/material";
+
 export default  function RegisterUser() {
     return (
-        <div>RegisterUser</div>
+        <form action="">
+            <TextField fullWidth label="fullWidth" id="fullWidth" />
+        </form>
     )
 }
