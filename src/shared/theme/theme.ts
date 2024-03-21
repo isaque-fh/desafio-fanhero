@@ -10,7 +10,7 @@ export const theme = createTheme({
       main: Colors.Primary
     },
     secondary: {
-      main: Colors.Secondary
+      main: Colors.White
     },
     background: {
       default: Colors.White
@@ -40,7 +40,7 @@ export const theme = createTheme({
     },
     h3: {
       fontSize: typography.pxToRem(20),
-      fontWeight: 600
+      fontWeight: 600,
     },
     subtitle1: {
       fontSize: typography.pxToRem(16),
