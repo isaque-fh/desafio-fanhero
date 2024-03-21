@@ -22,7 +22,7 @@ export const MenuLateral = ({ children }: {children: React.ReactNode}) => {
 
           <Box>
             <List component="nav">
-              <Link to="/users">
+              <Link to="/users" style={{ textDecoration: 'none',color: 'inherit'}}>
               <ListItemButton className={classes.btn}>
                 <ListItemIcon>
                   <PersonIcon/>
@@ -33,12 +33,14 @@ export const MenuLateral = ({ children }: {children: React.ReactNode}) => {
               
             </List>
             <List component="nav">
+            <Link to="/create-user" style={{ textDecoration: 'none',color: 'inherit'}}>
               <ListItemButton  className={classes.btn}>
                 <ListItemIcon>
                   <PersonAddIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Create Users" />
               </ListItemButton>
+              </Link>
             </List>
           </Box>
         </Box>

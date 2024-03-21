@@ -1,0 +1,43 @@
+import { useForm } from "react-hook-form";
+import { useCreateUserMutation } from "../../../../application/services/userAPi";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
+interface FormValues {
+  firstName: string;
+  lastName: string;
+  email: string;
+  jobArea: string;
+}
+const useCreateUserForm = () => {
+    const [registerUser] = useCreateUserMutation();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
+    const [alertOpen, setAlertOpen] = useState(false);
+  
+    const navigate = useNavigate();
+    const handleCloseAlert = () => {
+      setAlertOpen(false);
+      navigate('/users');
+    };
+    const onSubmit = async (data: FormValues) => {
+      try {
+        await registerUser(data);
+        setAlertOpen(true);
+      } catch (error) {
+        console.error('Erro ao criar usuário:', error);
+        // Lógica de tratamento de erro, se necessário
+      }
+    };
+  
+    return {
+      register,
+      handleSubmit,
+      errors,
+      onSubmit,
+      alertOpen,
+      handleCloseAlert
+    };
+  };
+  export default useCreateUserForm;
