@@ -2,11 +2,11 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core'
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    container:{
+    container: {
       display: 'flex',
       flexDirection: 'column',
       width: theme.spacing(28),
-      padding: '0 20px',
+      padding: '0 20px'
     },
     btn: {
       color: theme.palette.text.primary,
@@ -16,6 +16,6 @@ export const useStyles = makeStyles((theme: Theme) =>
       '&:hover': {
         color: theme.palette.primary.main
       }
-    },
+    }
   })
 )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormGroup, InputLabel, Input } from '@mui/material';
+import { FormGroup, InputLabel, Typography, TextField } from '@mui/material';
 
 interface FormInputProps {
   id: string;
@@ -12,15 +12,16 @@ interface FormInputProps {
 
 const FormInput: React.FC<FormInputProps> = ({ id, label, type, register, error, errorMessage }) => {
   return (
-    <FormGroup>
+    <FormGroup sx={{ textAlign: 'left'}} >
       <InputLabel>{label}</InputLabel>
-      <Input
+      <TextField
         {...register}
         id={id}
         placeholder={label}
         type={type}
+        fullWidth
       />
-      {error && <p>{errorMessage}</p>}
+      {error && <Typography color='error' variant='subtitle2'>{errorMessage}</Typography>}
     </FormGroup>
   );
 };
