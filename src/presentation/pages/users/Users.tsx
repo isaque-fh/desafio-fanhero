@@ -1,15 +1,26 @@
-
-import { Box, Typography } from '@mui/material'
-import UserTable from './components/user-list/UserTable'
-import { useStyles } from './UsersStyle'
+import { Box, Paper, Table, TableContainer, Typography } from '@mui/material'
+import UserTableBody from './components/table-body/UserTableBody'
+import TableHeadRow from './components/table-head/TableHead'
+import { CircularProgress } from '@material-ui/core'
+import useUsers from './hooks/UseFetchUsers'
 export default function User() {
-  const classes = useStyles()
+
+  const { users, isLoading,classes,titles } = useUsers()
+
+  if (isLoading) return <CircularProgress color='primary' />
   return (
     <>
       <Box className={classes.content}>
-        <Typography variant='h1' className={classes.title}>Users</Typography> 
+        <Typography variant='h1' className={classes.title}>
+          Users
+        </Typography>
         <Box>
-          <UserTable/>
+          <TableContainer component={Paper} aria-label='simple table'>
+            <Table>
+              <TableHeadRow titles={titles} />
+              <UserTableBody users={users!} />
+            </Table>
+          </TableContainer>
         </Box>
       </Box>
     </>

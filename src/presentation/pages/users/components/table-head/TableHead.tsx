@@ -1,13 +1,13 @@
 import { TableCell, TableHead, Typography } from '@mui/material'
-interface MyComponentProps {
+interface TableHead {
   titles: string[]
 }
-const TableHeadRow: React.FC<MyComponentProps> = ({ titles }) => {
+const TableHeadRow: React.FC<TableHead> = ({ titles }) => {
   return (
     <TableHead>
       {titles?.map((title, index) => (
         <TableCell key={index}>
-          <Typography variant='h3' color='black'>
+          <Typography variant='subtitle1' color='black'>
             {title}
           </Typography>
         </TableCell>

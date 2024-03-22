@@ -9,6 +9,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     content: {
       color: theme.palette.primary.main,
+      width: '100%',
+      boxSizing: 'border-box',
       display: 'flex',
       flexDirection: 'column',
       textAlign: 'left',

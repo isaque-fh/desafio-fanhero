@@ -10,7 +10,9 @@ interface FormInputProps {
   errorMessage: string;
 }
 
+
 const FormInput: React.FC<FormInputProps> = ({ id, label, type, register, error, errorMessage }) => {
+  
   return (
     <FormGroup sx={{ textAlign: 'left'}} >
       <InputLabel>{label}</InputLabel>

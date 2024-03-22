@@ -13,11 +13,11 @@ export default function RegisterUser() {
     errors,
     onSubmit,
     alertOpen,
-    handleCloseAlert
+    handleCloseAlert,
   } = useCreateUserForm()
 
   return (
-    <Box width={'100%'} sx={{ display: 'flex', flexDirection: 'column', gap: theme.spacing(3) }}>
+    <Box width={'100%'} sx={{ display: 'flex', flexDirection: 'column', gap: theme.spacing(3), textAlign: 'left' }}>
       <Typography variant='h1'>Register User</Typography>
       <FormAlert open={alertOpen} onClose={handleCloseAlert} />
       <form onSubmit={handleSubmit(onSubmit)} style={{ display: 'flex', flexDirection: 'column', gap: theme.spacing(3) }}>
@@ -69,7 +69,7 @@ export default function RegisterUser() {
               : 'Job Area is required'
           }
         />
-        <FormButton onClick={handleSubmit(onSubmit)} />
+      <FormButton onClick={handleSubmit(onSubmit)}  disabled={!!errors.firstName || !!errors.lastName || !!errors.email || !!errors.jobArea}  />
       </form>
     </Box>
   )

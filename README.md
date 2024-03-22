@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Projeto de Lista de Usuários
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma aplicação de lista de usuários com funcionalidades de listagem, exclusão e registro de usuários. Ele utiliza o [MockiAPI](https://mocki.io/) para gerar uma API de simulação, [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) para o consumo da API, React com TypeScript para o front-end, Material-UI como sistema de design e React Hook Form para a gestão de formulários.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Listagem de usuários: exibe uma lista de usuários com informações como nome, sobrenome, área de trabalho, e-mail e data de criação.
+- Exclusão de usuários: permite ao usuário excluir um usuário da lista.
+- Registro de usuários: oferece um formulário para o registro de novos usuários.
 
-## Expanding the ESLint configuration
+## Configuração e Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Pré-requisitos
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js e npm instalados globalmente no seu ambiente de desenvolvimento.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Instalação
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone o repositório do projeto para o seu ambiente local:
+
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-projeto.git
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```bash
+   cd nome-do-projeto
+   ```
+
+3. Instale as dependências do projeto:
+
+   ```bash
+   yarn install
+   ```
+
+## Uso
+
+1. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   yarn start
+   ```
+
+2. Abra o navegador e acesse `http://localhost:3000` para ver a aplicação em execução.
+
+3. Explore as funcionalidades da aplicação, como listagem, exclusão e registro de usuários.
+
+## Tecnologias Utilizadas
+
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Material-UI](https://mui.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+- [MockiAPI](https://mocki.io/)
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir um novo problema se encontrar algum bug ou tiver sugestões para melhorias.

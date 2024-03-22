@@ -3,8 +3,6 @@ import { useCreateUserMutation } from "../../../../application/services/userAPi"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
 interface FormValues {
   firstName: string;
   lastName: string;
@@ -13,14 +11,27 @@ interface FormValues {
 }
 const useCreateUserForm = () => {
     const [registerUser] = useCreateUserMutation();
-    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>();
+    const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({
+      mode: 'all',
+      criteriaMode: 'all',
+      defaultValues: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        jobArea: ''
+      }
+    });
     const [alertOpen, setAlertOpen] = useState(false);
-  
+
     const navigate = useNavigate();
+
+  
+
     const handleCloseAlert = () => {
       setAlertOpen(false);
       navigate('/users');
     };
+
     const onSubmit = async (data: FormValues) => {
       try {
         await registerUser(data);
@@ -30,14 +41,14 @@ const useCreateUserForm = () => {
         // Lógica de tratamento de erro, se necessário
       }
     };
-  
+
     return {
       register,
       handleSubmit,
       errors,
       onSubmit,
       alertOpen,
-      handleCloseAlert
+      handleCloseAlert,
     };
   };
   export default useCreateUserForm;
