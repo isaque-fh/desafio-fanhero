@@ -13,7 +13,7 @@ const FormButton: React.FC<FormButtonProps> = ({ onClick, disabled }) => {
       <Link to={'/users'}>
         <Button variant='outlined' >Cancel</Button>
       </Link>
-      <Button variant='contained' onClick={onClick} disabled={disabled}>Register</Button>
+      <Button variant='contained' onClick={onClick} disabled={disabled}>Save</Button>
     </Box>
   )
 }
