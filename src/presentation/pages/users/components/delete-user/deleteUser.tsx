@@ -1,5 +1,5 @@
 import { Button, Typography } from '@mui/material'
-import { useDeleteUserMutation } from '../../../application/services/userAPi'
+import { useDeleteUserMutation } from '../../../../../application/services/userAPi'
 import DeleteIcon from '@mui/icons-material/Delete'
 
 export default function DeleteUser(prop: { id: string }) {

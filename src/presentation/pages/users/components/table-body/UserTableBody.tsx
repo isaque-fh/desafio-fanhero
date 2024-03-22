@@ -1,12 +1,13 @@
 import {  TableBody, TableRow, TableCell, Typography } from "@mui/material";
 import { User } from "../../../../../domain/User";
-import DeleteUser from "../../../../../shared/components/delete-user/DeleteUser";
+import DeleteUser from "../delete-user/deleteUser";
 
 interface TableProps {
     users: User[];
   }
 const UserTableBody: React.FC<TableProps> = ({ users }) => {
     return (
+      
       <TableBody >
         {users?.map((user) => (
           <TableRow key={user.id}>

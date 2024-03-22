@@ -5,11 +5,11 @@ interface FormInputProps {
   id: string;
   label: string;
   type: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: any; 
   error: boolean;
   errorMessage: string;
 }
-
 
 const FormInput: React.FC<FormInputProps> = ({ id, label, type, register, error, errorMessage }) => {
   

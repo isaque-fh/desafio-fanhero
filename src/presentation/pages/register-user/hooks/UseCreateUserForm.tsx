@@ -24,9 +24,6 @@ const useCreateUserForm = () => {
     const [alertOpen, setAlertOpen] = useState(false);
 
     const navigate = useNavigate();
-
-  
-
     const handleCloseAlert = () => {
       setAlertOpen(false);
       navigate('/users');
@@ -37,8 +34,7 @@ const useCreateUserForm = () => {
         await registerUser(data);
         setAlertOpen(true);
       } catch (error) {
-        console.error('Erro ao criar usuário:', error);
-        // Lógica de tratamento de erro, se necessário
+        navigate('/error')
       }
     };
 

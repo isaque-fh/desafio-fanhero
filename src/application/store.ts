@@ -1,8 +1,6 @@
 import { userApi } from './services/userAPi';
 import { configureStore, ConfigureStoreOptions } from "@reduxjs/toolkit";
 
-
-
 export const createStore = (
   options?: ConfigureStoreOptions["preloadedState"] | undefined
 ) =>
