@@ -1,52 +1,46 @@
-# Projeto de Lista de Usuários
+# User List Project
 
-Este projeto é uma aplicação de lista de usuários com funcionalidades de listagem, exclusão e registro de usuários. Ele utiliza o [MockiAPI](https://mocki.io/) para gerar uma API de simulação, [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) para o consumo da API, React com TypeScript para o front-end, Material-UI como sistema de design e React Hook Form para a gestão de formulários.
+This project is a user list application with features for listing, deleting, and registering users. It utilizes [MockiAPI](https://mocki.io/) to generate a simulated API, [RTK Query](https://redux-toolkit.js.org/rtk-query/overview) for API consumption, React with TypeScript for the front-end, Material-UI as the design system, and React Hook Form for form management.
 
-## Funcionalidades
+## Features
 
-- Listagem de usuários: exibe uma lista de usuários com informações como nome, sobrenome, área de trabalho, e-mail e data de criação.
-- Exclusão de usuários: permite ao usuário excluir um usuário da lista.
-- Registro de usuários: oferece um formulário para o registro de novos usuários.
+- User listing: displays a list of users with information such as first name, last name, job area, email, and creation date.
+- User deletion: allows the user to delete a user from the list.
+- User registration: provides a form for registering new users.
 
-## Configuração e Instalação
+## Configuration and Installation
 
-### Pré-requisitos
+### Prerequisites
 
-- Node.js e npm instalados globalmente no seu ambiente de desenvolvimento.
+- Node.js and npm installed globally in your development environment.
 
-### Instalação
+### Installation
 
-1. Clone o repositório do projeto para o seu ambiente local:
-
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
-   ```
-
-2. Acesse o diretório do projeto:
+1. Clone the project repository to your local environment:
 
    ```bash
-   cd nome-do-projeto
-   ```
+   git clone https://github.com/isaque-fh/desafio-fanhero/
 
-3. Instale as dependências do projeto:
+
+2. Install the project dependencies:
 
    ```bash
    yarn install
    ```
 
-## Uso
+## Usage
 
-1. Inicie o servidor de desenvolvimento:
+1. Start the development server:
 
    ```bash
-   yarn start
+   yarn dev
    ```
 
-2. Abra o navegador e acesse `http://localhost:3000` para ver a aplicação em execução.
+2. Open your browser and access http://localhost:port to see the application running.
 
-3. Explore as funcionalidades da aplicação, como listagem, exclusão e registro de usuários.
+3. Explore the application's functionalities, such as listing, deleting and registering users.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -55,6 +49,3 @@ Este projeto é uma aplicação de lista de usuários com funcionalidades de lis
 - [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
 - [MockiAPI](https://mocki.io/)
 
-## Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request ou abrir um novo problema se encontrar algum bug ou tiver sugestões para melhorias.
